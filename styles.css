@@ -1,0 +1,208 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-image: url("./images/dark-portrait-serious-young-man-black-background-with-copy-space_379201-3688.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.container{
+    position: absolute;
+    bottom: 78%;
+    left: 0;
+    width: 100%;
+
+}
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, search right */
+    align-items: center;
+    width: 98%;
+}
+.search-bar .search {
+    width: 250px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.logo img {
+    height: 200px;
+    width: 200px;
+}
+
+.ibox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    height: 100vh;
+}
+.ibox{
+    margin-left: 150px;
+}
+.ibox h1{
+    color: white;
+    font-size: 3rem;
+}
+.ibox span{
+    color: red;
+}
+div nav li {
+    display: inline-block; /* Make each list item inline-block to keep them side by side */
+    position: relative; /* Required for positioning the pseudo-element inside each list item */
+}
+
+div nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block; /* Makes the anchor a block-level element to fill the width of the li */
+    padding: 10px 15px; /* Adjust padding as needed */
+    position: relative; /* Ensures the pseudo-element is positioned relative to the anchor */
+}
+
+li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    height: 0.4em;
+    width: 0%; 
+    background-color: #FF0833; 
+    transition: width 0.3s ease-in-out; 
+}
+
+li a:hover::after {
+    width: 100%; 
+}
+
+
+.products-shoes,
+.products-tshirts {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0;
+}
+    
+.products-shoes img,
+.products-tshirts img {
+    max-width: 200px;
+    height: 200px;
+}
+.products-shoes{
+    margin-top: 100px;
+}
+.products-tshirts{
+    margin-top: 80px;
+}
+.nike{
+    font-weight: bolder;
+    margin-top: 20px;
+}
+#nike,#redtape, #spyne, #puma{
+    font-weight: lighter;
+    margin-top: 10px;
+}
+.add-to-cart {
+    background-color: #ff6600; /* Orange color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #cc5500; /* Darker orange on hover */
+}
+
+footer {
+    background-color: #545454;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+.container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* About Section */
+.about, .contact {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.about h3, .contact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.contact ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact ul li a:hover {
+    color: #ff6600;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .container-2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about, .contact {
+        padding: 15px;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+}
